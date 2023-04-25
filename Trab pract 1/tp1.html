@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPNº1</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-warning">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1 text-dark">T.P.Nº1</span>
+        </div>
+    </nav>
+ 
+    <div class="container mt-3">
+        <h1 class="display-6">Alta producto</h1>
+    
+        <div class="row"> <!--para crear una fila-->
+             <!--cada fila se puede dividir hasta en 12 partes--> 
+             <!--para crear una columna primero debe estar creada la fila-->
+              <!--cuando voy creado columnas va ocupando lugar de la fila de izquierda a derecha-->
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12"> <!--para crear una columna, en este caso de tamaño 4 que es 1/3 de la fila-->
+                        <div class="mb3"> <!-- para dar un espacio-->
+                            <label class="form-label">Descripción</label>
+                            <input class="form-control" type="text">
+                        </div>    
+                        <div class="mb3"> <!-- para dar un espacio-->
+                            <!--<label class="form-label">Detalle</label>
+                            <input class="form-control" type="text">-->
+                            <label for="exampleFormControlTextarea1" class="form-label">Detalle</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+                        </div> 
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="25.5">
+                                   
+                                  </div>
+                                  <div class="input-group mb-3">
+                                    <span class="input-group-text">N°</span>
+                                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Stock">
+                                  </div>
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <p>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">$</span>
+                                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Precio de Venta">
+                                       
+                                      </div>
+                                      <select class="form-select" id="validationCustom04" required>
+                                        <option selected disabled value="">Categoria</option>
+                                        <option>Economica</option>
+                                        <option>Premium</option>
+                                      </select>
+                                    </p>  
+                            </div>
+                        </div>          
+                        <p>
+                        <div class="mb3">
+                            <div class="d-grid gap-2 justify-content-md-end">
+                                <button class="btn btn-outline-success">Guardar prodcuto</button>
+                            </div>
+                        </div>
+                        </p>
+            </div>
+                
+            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                <div class="row mb3">
+                    <p>
+                    <div class="col-lg-6">
+                        <label class="form-label">Fecha de Alta</label>
+                        <input class="form-control" type="date">
+                    </div>
+                    <div class="col-lg-6">
+                        <label class="form-label">Hora de Alta</label>
+                        <input class="form-control" type="time">
+                    </div>
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                    <img src="imagen.png" class="img-fluid" alt="">
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

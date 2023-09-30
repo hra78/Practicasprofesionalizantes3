@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi web</title>
 </head>
 <body>
-    
+    <p>
+        <h1>Formulario de registro</h1>
+    </p>
+
+    <p> <!--CON LA P INDICAMOS COMIENZO Y FIN DE UN PARRAF0-->
+       <label>Nombre:</label> <!--CON EL COM LABEL PONEMOS EL NOMBRE DE LA ETIQUETA-->
+       <input type="text" maxlength="50">  <!--CON EL COM INPUT GENERAMOS LA POSIBLIDAD DE UN  DATO EXTERNO O 
+    UN DATO DEL USUARIO EN ESTE CASO LIMITAMOS QUE EL DATO INGRESADO SEA TEXTO A TRAVEZ DEL COMANDO TYPE
+Y QUE EL MAXIMO DE LONGITUD SEA 50 CARACTERES-->
+    </p>
+
+    <p>
+        <label>Apellidos:</label>
+        <input type="text" maxlength="50">
+    </p>
+    <form> <!--PERMITE HABILITAR CAMPOS INTERACTIVOS CON EL USUARIO, OSEA CUADRADITOS DE DIALOGOS U OPCIONES
+    PARA QUE EL USUARIO DE LA WEB COMPLETE, RADIO SON LOS CIRCULITOS PARA ELEGIR UNA OPCION-->
+        <p>
+            <label>Sexo:</label>
+            <input type="radio" name="Sexo" value="hombre"> hombre <input type="radio" name="Sexo" value="mujer"> mujer 
+        </p>
+    </form>
+
+    <p>
+        <label>Correo:</label>
+        <input type="email">
+    </p>
+
+    <form>
+        <input type="radio" name="notificaciones" value="Notificaciones confirmadas" checked="checked"> "Deseo recibir información sobre novedades y
+        ofertas"
+    </form>
+
+    <form>
+        <input type="radio" name="condiciones" value="condiciones confirmadas"> "Declaro haber leido y aceptar las condiciones
+        generales del programa y la normativa sobre protección de datos"
+    </form>
+    <button type="submit">Enviar</button>    
 </body>
 </html>

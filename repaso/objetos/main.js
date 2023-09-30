@@ -11,7 +11,7 @@ const empleados = {
 //Forma 1 de mostrar los datos
 const nombre = empleados.nombre
 //const gmail = empleados.correos.gmail
-const outlook = empleados.correos.outlook
+//const outlook = empleados.correos.outlook
 
 
 // Forma 2 - Destructuring Object
@@ -20,6 +20,7 @@ const outlook = empleados.correos.outlook
     // y por ultimo se asignan los datos a las constantes mencionadas
 
 const {gmail, outlook } = empleados.correos
-const {apellido } = empleados
+
+const {apellido } = empleados.apellido
 
 document.write(gmail)

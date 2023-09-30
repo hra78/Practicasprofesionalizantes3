@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-warning">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1 text-dark">REPASO</span>
+        </div>
+    </nav>
+        <div class="container mt-3">
+        <h4>Introducción a JavaScript</h4>
+        <div class=""row>
+            <div class="col-lg-3">
+                <div class="mb-3">
+                    <label for="" class="form-label">Dato 1</label>
+                    <input id="inp_d1" type="number" class="form-control">
+                </div> 
+                <div class="mb-3">
+                    <label for="" class="form-label">Dato 2</label>
+                    <input id="inp_d2" type="number" class="form-control">
+            </div>
+            <button id="btn_calcular" class="btn btn-success">Calcular</button>
+        </div>
+    </div>
+    <script>
+
+        function calcular(){         /*función clásica*/
+            let dato1 = document.getElementById("inp_d1").value   /*buscamos un elemento por id*/
+            let dato2 = document.getElementById("inp_d2").value
+
+            let resultado = Number(dato1) + Number(dato2)
+
+            console.log(resultado)
+
+        }  
+
+        document.getElementById("btn_calcular").addEventListener("click",calcular)
+
+    </script>
+</body>
+</html>

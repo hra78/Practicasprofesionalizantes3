@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Act 1 Ley de Ohm</title>
+    <link rel="stylesheet" href="bootstrap.min.css"> <!--para vincular el archivo bootstrap con todas sus configuraciones de estilo, colores, input, botones, etc-->
+</head>
+<body>
+    <div class="container mt-3"> 
+        <div class="row-lg-o">
+            <div class="col-lg-o">
+                <div class="mb-3"> <!--da un espacio arriba para para despegar el texto o contenedor del margen superior-->
+                    <label class="form-label">Operación</label>
+                    <select onchange="cambiar_label()" class="form-select" id="slt_operacion"> <!--en este momento se selecciona la operacion cargando el numero de opcion en el indicador stl_operacion activando la funcion cambiar label definida en el archivo main.js, la seleccion se hace dewsde un menu de opciones-->
+                        <option selected disabled value="-1">Seleccione operación</option>
+                        <option value="0">Tensión</option>
+                        <option value="1">Resistencia</option>
+                        <option value="2">Intensidad</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label id="lbl_1" class="form-label">Dato1</label> <!--en esta linea toma el valor de cambiar label por medio del indicador lbl_1-->
+                    <input id="inp_d1" class="form-control" type="number"> <!--con este comando recolectamos el dato o valor con el cual vamos a operar en este caso restrinfimos el ingreso unicamente a numeros-->
+                </div>
+                <div class="mb-3">
+                    <label id="lbl_2" class="form-label">Dato2</label> <!--en esta linea toma el valor de cambiar label por medio del indicador lbl_2-->
+                    <input id="inp_d2" class="form-control" type="number"> <!--con este comando recolectamos el dato o valor con el cual vamos a operar en este caso restrinfimos el ingreso unicamente a numeros-->
+                </div>
+                <button onclick="recolectar()" id="btn_calcular" class="btn btn-success">calcular</button> <!--llama a la funcion recolentar cuadno se hace click en el boton calcular osea que hace calculo y arroja el valor en este caso-->
+                <div class="col-lg-o">
+                    <h4 id="h_resultado"></h4>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="main.js"><</script>
+</body>
+</html>

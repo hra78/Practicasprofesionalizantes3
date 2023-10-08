@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>actividad 2 funciones autos</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-warning"> <!--aca se pone la primer fila de color-->
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"> Automotores Neuquen  <!--el texto adentro de la primir linea-->
+
+            </span>
+        </div>
+    </nav>
+  <div class="row"> <!--para habilitar una fila-->
+    <div class="col-lg-6 col-md-6 col-sm-6 col-6"> <!--aca cree una columna que ocupe la mitad de la final, como la fila tiene 12 posiciones, asigno 6 para que quede en la mitad y asi podria hacer 2 columnas-->
+        <p> Ford Ka $ 2.900.000</p>
+        <p> Ford Fiesta $ 3.350.000</p>
+        <p> Ford Focus $ 3.960.000</p>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-6"> <!-- aca cree la segunda columna-->
+        <select onchange="calcular()" id="op">
+            <option selected disabled value="-1">Seleccione modelo y averigue la bonificacion</option>
+            <option value="0"> Ford ka</option>
+            <option value="1">Ford Fiesta</option>
+            <option value="2">Ford Focus</option>
+        </select>
+        <h4 id="precio_final"></h4>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

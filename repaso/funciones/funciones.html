@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="bootstrap.min.css"> <!---->
+</head>
+<body>
+    <!-- navbar -->
+    <div class="container mt-3">
+        <div class="row-lg-o">
+            <div class="col-lg-o">
+                <div class="mb-3">
+                    <label class="form-label">Operación</label>
+                    <select onchange="cambiar_label()" class="form-select" id="slt_operacion">
+                        <option selected disabled value="-1">Seleccione operación</option>
+                        <option value="0">Sumar</option>
+                        <option value="1">Restar</option>
+                        <option value="2">Multiplicar</option>
+                        <option value="3">Dividir</option>
+                        <option value="4">Intensidad</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label id="lbl_1" class="form-label">Dato 1</label>
+                    <input id="inp_d1" class="form-control" type="number">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Dato 2</label>
+                    <input id="inp_d2" class="form-control" type="number">
+                </div>
+                <button onclick="recolectar()" id="btn_calcular" class="btn btn-success">calcular</button>
+                <div class="col-lg-o">
+                    <h4 id="h_resultado"></h4>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+    <script src="funciones.js"><</script>
+</body>
+</html>

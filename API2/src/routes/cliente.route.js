@@ -4,6 +4,8 @@ const router = express.Router()
 
 const conexion = require('../database')
 
+//CRUD create read
+
 router.get('/clientes', async(req,res) => {
 
     const db = await conexion.obtener_conexion()

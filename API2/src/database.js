@@ -1,0 +1,16 @@
+const mariadb = require('mariadb')
+
+const parametros=mariadb.createPool({
+    host:'localhost',
+    port:3307,
+    user:'root',
+    password:'chiva78', 
+    database:'apidb'
+})
+
+async function obtener_conexion(){
+    const conexion = await parametros.getConnection()
+    return conexion
+}
+
+module.exports = { obtener_conexion }

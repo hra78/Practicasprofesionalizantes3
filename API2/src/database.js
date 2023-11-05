@@ -8,7 +8,9 @@ const parametros=mariadb.createPool({
     database:'apidb'
 })
 
-async function obtener_conexion(){
+async function obtener_conexion()
+{
+    //obtenemos la instancia de conexion
     const conexion = await parametros.getConnection()
     return conexion
 }

@@ -8,6 +8,7 @@ export default {
     name:'Cliente',
     components:{
         FormCliente
-    }
+    },
+    setup() {},
 }
 </script>

@@ -6,10 +6,11 @@
                  <label class="form-label">Nombre</label>
                  <input v-model="nombre" class="form-control" type="text">
             </div>
-        </div>
-             <div>
+              <div>
              <button @click="mostrar()" class="btn btn-success">Aceptar</button>
              </div>
+        </div>
+           
 
              <div class="col-lg-8">
                 <h4>{{titulo}}</h4>

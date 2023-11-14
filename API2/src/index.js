@@ -22,3 +22,22 @@ server.set('port',process.env.PORT || 3000)
 server.listen(server.get('port'))
 
 console.log('servidor corriendo en puerto: ',server.get('port'))
+
+const socketio = require('socket.io')
+const servidor = server.listen(server.get('port'), ()=> {
+    console.log('La conexión fue exitosa!')
+});
+
+//le pasamos el servidor a soketio, para habilitar el canal websocket
+const io = socketio(servidor)
+
+//establecemos la apertura del canal, para emitir posteriormente los datos
+io.on('connection', (socket) => {
+    //socket.emit('dato-socket',10) //este disparo se realiza una sola vez cuando el cliente desee vincularse al servidor
+    setInterval(()=>{
+        socket.emit('dato-socket', Math, random())
+    }, 1000)
+    socket.on('respuesta', (valor) => {
+        console.log(valor)
+    });
+})

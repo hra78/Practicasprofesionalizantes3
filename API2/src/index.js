@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
+const socketio = require('socket.io')
 
 //accedemos a la funcionalidad de express
 const server = express()
@@ -18,12 +19,6 @@ server.use(require('./routes/cliente.route'))
 //ponemos en marcha el servidor especificamos puerto donde correra nuestro server 
 server.set('port',process.env.PORT || 3000)
 
-//iniciando el servidor
-server.listen(server.get('port'))
-
-console.log('servidor corriendo en puerto: ',server.get('port'))
-
-const socketio = require('socket.io')
 const servidor = server.listen(server.get('port'), ()=> {
     console.log('La conexión fue exitosa!')
 });
@@ -31,7 +26,7 @@ const servidor = server.listen(server.get('port'), ()=> {
 //le pasamos el servidor a soketio, para habilitar el canal websocket
 const io = socketio(servidor)
 
-//establecemos la apertura del canal, para emitir posteriormente los datos
+//establecemos la apertura del canal, para emitir posteriormente lnpmos datos
 io.on('connection', (socket) => {
     //socket.emit('dato-socket',10) //este disparo se realiza una sola vez cuando el cliente desee vincularse al servidor
     setInterval(()=>{

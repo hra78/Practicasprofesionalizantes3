@@ -18,13 +18,17 @@ const routes = [
   {
     path:'/clientes',
     name:'cliente',
-    component: () => import('../views/Cliente.vue')
-
+    component: () => import(/* webpackChunkName: "about" */'../views/Cliente.vue')
+  },
+  {
+    path:'/socket',
+    name:'Socket',
+    component: () => import(/* webpackChunkName: "about" */'../views/Socket.vue')
   },
   {
     path:'/nuestrasnoticias',
     name:'Noticias',
-    component: () => import('../views/Noticias.vue')
+    component: () => import(/* webpackChunkName: "about" */'../views/Noticias.vue')
   }
 ]
 

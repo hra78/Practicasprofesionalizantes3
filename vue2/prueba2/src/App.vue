@@ -11,6 +11,7 @@
         <router-link class="nav-link" to="/about">About</router-link>
         <router-link class="nav-link" to="/nuestrasnoticias">Noticias</router-link>
         <router-link class="nav-link" to="/clientes">clientes</router-link>
+        <router-link class="nav-link" to="/socket">Indicador</router-link>
       </div>
      </div>
    </div>
